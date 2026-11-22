@@ -3,8 +3,10 @@
 import { useEffect, useState } from "react";
 import { API_URL } from "../constants.js";
 import EtatRequete from "../components/EtatRequete.jsx";
+import { useParams } from "react-router";
 
-export default function Auteur({ id }) {
+export default function Auteur() {
+  const { id } = useParams();
   const [auteur, setAuteur] = useState(null);
   const [articles, setArticles] = useState([]);
   const [chargement, setChargement] = useState(true);

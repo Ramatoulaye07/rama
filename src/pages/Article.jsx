@@ -3,8 +3,10 @@ import { API_URL } from "../constants.js";
 import EtatRequete from "../components/EtatRequete.jsx";
 import ListeCommentaires from "../components/ListeCommentaires.jsx";
 import CommentaireForm from "../components/CommentaireForm.jsx";
+import { useParams } from "react-router";
 
-export default function Article({ id }) {
+export default function Article() {
+  const { id } = useParams();
   const [article, setArticle] = useState(null);
   const [commentaires, setCommentaires] = useState([]);
   const [chargement, setChargement] = useState(true);

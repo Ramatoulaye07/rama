@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { API_URL } from "../constants.js";
 import EtatRequete from "../components/EtatRequete.jsx";
+import {Link} from "react-router";
 
 export default function Auteurs() {
   const [auteurs, setAuteurs] = useState([]);
@@ -36,7 +37,9 @@ export default function Auteurs() {
         <ul className="liste-auteurs">
           {auteurs.map((a) => (
             <li key={a.id}>
-              {a.name} — {a.company.name}
+              <Link to={`/auteurs/${a.id}`}>
+                {a.name} — {a.company.name}
+              </Link>
             </li>
           ))}
         </ul>

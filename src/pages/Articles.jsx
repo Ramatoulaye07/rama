@@ -3,6 +3,7 @@ import { API_URL } from "../constants.js";
 import EtatRequete from "../components/EtatRequete.jsx";
 import ListeArticles from "../components/ListeArticles.jsx";
 import BarreRecherche from "../components/BarreRecherche.jsx";
+import { useOutletContext } from "react-router";
 // TODO(P402) : Étape 4 puis 5.
 // Liste des articles chargés depuis l'API, avec recherche.
 export default function Articles() {
@@ -10,7 +11,7 @@ export default function Articles() {
   const [chargement, setChargement] = useState(true);
   const [erreur, setErreur] = useState(null);
   const [recherche, setRecherche] = useState("");
-  const [favoris, setFavoris] = useState([]);
+
 
   useEffect(() => {
     const controller = new AbortController();
@@ -31,11 +32,7 @@ export default function Articles() {
       });
     return () => controller.abort();
   }, []);
-  function basculerFavori(articleId) {
-    setFavoris((favorisActuels) =>
-      favorisActuels.includes(articleId) ? favorisActuels.filter((id) => id !== articleId) : [...favorisActuels, articleId]
-    );
-  }
+  const { favoris, basculerFavori } = useOutletContext();
   const articlesFiltres = articles.filter((article) =>
     article.title.toLowerCase().includes(recherche.toLowerCase())
   );
