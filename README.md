@@ -11,6 +11,7 @@ publique JSONPlaceholder. Les textes en latin sont des données d'essai.
     npm run dev
 
 L'application s'ouvre sur http://localhost:5173.
+Adresse en ligne https://terangablog-navy.vercel.app/
 
 ## Fonctionnalités
 
