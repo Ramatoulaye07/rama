@@ -4,6 +4,7 @@ import { API_URL } from "../constants.js";
 import EtatRequete from "../components/EtatRequete.jsx";
 import ListeArticles from "../components/ListeArticles.jsx";
 
+
 export default function Accueil() {
   const { favoris, basculerFavori } = useOutletContext();
   const [articles, setArticles] = useState([]);

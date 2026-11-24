@@ -1,7 +1,4 @@
 import { Link } from "react-router";
-// TODO(P101) : Étape 1 (chapitre 1) puis étape 2 (chapitre 2).
-// Carte d'un article.
-// Props attendues : article (objet avec id, title, body), et plus tard estFavori, onBasculerFavori.
 export default function ArticleCard({ article, estFavori, onBasculerFavori }) {
   return (
     <article className="article-card">
