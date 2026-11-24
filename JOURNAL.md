@@ -1,6 +1,6 @@
 # Journal de bord : utilisation de l'IA
 
-# Date | Question posée | Ce que j'ai retenu | Ce que j'ai écrit moi-même |
+# Question posée | Ce que j'ai retenu | Ce que j'ai écrit moi-même |
 
 Pourquoi ma page est blanche après l'étape 1 ?
 Le nom importé doit être identique à celui exporté dans donnees-test.js
@@ -21,4 +21,7 @@ J'ai ajouté l'import dans router.jsx
 Comment fonctionne useEffect avec fetch et AbortController ? 
 Le tableau de dépendances et le retour de l'effet annulent la requête
 J'ai testé le chargement et l'erreur hors connexion
+
+
+comment faute le depot en ligne
 
